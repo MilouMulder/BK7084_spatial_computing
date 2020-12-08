@@ -1,0 +1,905 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.2">
+    
+    
+      
+        <title>Process - Spatial Computing Project Template</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.19190aaf.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.24b84193.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#design-philosophy" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Spatial Computing Project Template" class="md-header-nav__button md-logo" aria-label="Spatial Computing Project Template">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Spatial Computing Project Template
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Process
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Spatial Computing Project Template" class="md-nav__button md-logo" aria-label="Spatial Computing Project Template">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Spatial Computing Project Template
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Planning
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Planning" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Planning
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Process
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Process
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#design-philosophy" class="md-nav__link">
+    Design philosophy
+  </a>
+  
+    <nav class="md-nav" aria-label="Design philosophy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#design-goals" class="md-nav__link">
+    Design goals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-residents" class="md-nav__link">
+    Future residents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-performance" class="md-nav__link">
+    Key Performance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis-on-the-site" class="md-nav__link">
+    Analysis on the Site
+  </a>
+  
+    <nav class="md-nav" aria-label="Analysis on the Site">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#building-visualisation" class="md-nav__link">
+    Building visualisation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-routes" class="md-nav__link">
+    Access routes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-heights-in-the-environment" class="md-nav__link">
+    Building heights in the environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programme-of-requirements" class="md-nav__link">
+    Programme of requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noise-table" class="md-nav__link">
+    Noise table
+  </a>
+  
+    <nav class="md-nav" aria-label="Noise table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#noise-chart" class="md-nav__link">
+    Noise chart
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../a1.1_Product/" class="md-nav__link">
+      Products
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Configuring
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Configuring" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Configuring
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../a2.1_Process/" class="md-nav__link">
+      Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../a2.1_Product/" class="md-nav__link">
+      Products
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Massing
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Massing" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Massing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../a3.1_Process/" class="md-nav__link">
+      Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../a3.1_Product/" class="md-nav__link">
+      Products
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Forming
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Forming" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Forming
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../a4.1_Process/" class="md-nav__link">
+      Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../a4.1_Product/" class="md-nav__link">
+      Products
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../about/" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Index
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Index" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon"></span>
+        Index
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../index/scripts/" class="md-nav__link">
+      Scripts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../index/figures/" class="md-nav__link">
+      Figures
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../index/presentations/" class="md-nav__link">
+      Presentations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../index/bibliography/" class="md-nav__link">
+      Bibliography
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Documenting (TBR)
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Documenting (TBR)" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon"></span>
+        Documenting (TBR)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../documenting/instructions/" class="md-nav__link">
+      Instructions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../documenting/folder_structure/" class="md-nav__link">
+      Folder Structure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../documenting/guidelines/" class="md-nav__link">
+      Guidelines
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#design-philosophy" class="md-nav__link">
+    Design philosophy
+  </a>
+  
+    <nav class="md-nav" aria-label="Design philosophy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#design-goals" class="md-nav__link">
+    Design goals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-residents" class="md-nav__link">
+    Future residents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-performance" class="md-nav__link">
+    Key Performance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis-on-the-site" class="md-nav__link">
+    Analysis on the Site
+  </a>
+  
+    <nav class="md-nav" aria-label="Analysis on the Site">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#building-visualisation" class="md-nav__link">
+    Building visualisation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-routes" class="md-nav__link">
+    Access routes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-heights-in-the-environment" class="md-nav__link">
+    Building heights in the environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programme-of-requirements" class="md-nav__link">
+    Programme of requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noise-table" class="md-nav__link">
+    Noise table
+  </a>
+  
+    <nav class="md-nav" aria-label="Noise table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#noise-chart" class="md-nav__link">
+    Noise chart
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Process</h1>
+                
+                <h2 id="design-philosophy">Design philosophy</h2>
+<h3 id="design-goals">Design goals</h3>
+<p>The given Design goals are separated into two categories: quantitative and qualitative (see <em>Figure X</em>). Additional we formulated three more design goals which have priority:</p>
+<ul>
+<li>Optimise the building for Sunlight and Sound Pollution</li>
+<li>Develop a layout that suits the residents</li>
+<li>Create a pleasant Living Environment</li>
+</ul>
+<h3 id="future-residents">Future residents</h3>
+<blockquote>
+<p>add text</p>
+</blockquote>
+<h3 id="key-performance">Key Performance</h3>
+<blockquote>
+<p>add text</p>
+</blockquote>
+<h2 id="analysis-on-the-site">Analysis on the Site</h2>
+<h3 id="building-visualisation">Building visualisation</h3>
+<p>The visualization of the surrounding environment of our site (<em>Figure X</em>) consists of a scale of architectural styles. This is due to the different building years, which have led to a diverse neighbourhood where different facades are positioned next to each other. The functions of the buildings also play a role in the diverse visualization. The main function is dwelling but there are also businesses and offices situated. Furthermore, our site is in ZOHO, which is the name of the area of the Rotterdamse Maakkwartier. A developing working and living space for and by makers in design, art, culture, media, tech, food architecture and urban planning. All pioneers who want to use their craftsmanship to strengthen themselves and ZOHO. This is reflected in the appearance of the environment. Creative and notable graphs can be found on the walls, which gives the area a coming up and hip neighbourhood feel. Moreover, near the site there is a shared garden and sportsfield for residents to use and where they can meet others.
+After analyzing the environment it is clear that the current building (<em>Figure X</em>) blends right in the area. Different kinds of functions that cause multiple identities. The building is a combination of a variation of heights and both monotone and trendy patterned facades. </p>
+<p><img src="..\img\1_building_visualisation.png" style="width:100%; height:100%;" frameborder="0"></p>
+<h2 id="access-routes">Access routes</h2>
+<p>In <em>Figure X</em> the accessibility of our site is shown. Our site is directly surrounded by a sidewalk with a few thresholds for access to the parking garage. Only the northeast side of the building is more focused on the accessibility for cars, because of the direct street that is situated opposite the building. Near the building, there are some car parking and a few bicycle parking. Furthermore, the main roads for vehicles that surround our site are bicycle roads (a bicycle road where cars are the guests and cyclists have the priority) and ‘normal’ car roads. In <em>Figure X</em> it is visualized which car roads are busy and which are widely used. In addition to this, the green walking route that is close to our site is shown.</p>
+<p><img src="..\img\1_access.png" style="width:100%; height:100%;" frameborder="0"></p>
+<h2 id="building-heights-in-the-environment">Building heights in the environment</h2>
+<p>If you look at the built environment, as shown in <em>Figure X</em>, and start in the north/ northeast, you can see that these buildings are mainly between 18 and 23 meters high. Most of these buildings are terraced houses. If you go around the map clockwise, the buildings are getting higher. Here we still have residents' buildings, but now shaped as duplex houses. At the bottom of the map (south), we are getting closer to the center of Rotterdam. This is why the buildings in the Southwest are higher than the buildings in the north: These are mainly office buildings with a height between 40 meters or even higher than 100 meters. To finish the clock, in the West, same as in the Southeast, we can find duplex houses. Nevertheless, these buildings have more storeys.
+With a height of 22 meters, our site currently fits in the street scene very well due to the similar building heights. But if the future building is higher than 40 meters, it will become more of a landmark..</p>
+<p><img src="..\img\1_gebouwhoogte.png" style="width:100%; height:100%;" frameborder="0"></p>
+<h2 id="programme-of-requirements">Programme of requirements</h2>
+<h2 id="functions">Functions</h2>
+<p>In <em>Figure X</em>, a table is shown where aspects concerning the sizes of all the spaces can be found. Which are the floor height, on which storey, square meter, amount of rooms, amount of voxels and for how many people the space is designed. This information will be used to construct the building in spatial computing.</p>
+<p>[table_rooms]</p>
+<h2 id="noise-table">Noise table</h2>
+<p>The average assigned noise level per space can be seen in <em>Figure X</em>. As well as the hours in which the noise levels occur. The corresponding reason for the chosen time in which the noise levels score a middle to high level has also been added. Besides, the spaces that are noise sensitive have also been classified. </p>
+<p>[table_noise]</p>
+<h3 id="noise-chart">Noise chart</h3>
+<p>The previous table showed us the average noise level and sensitivity of the various rooms. To have a better impression when the functions reach the different noise levels in specific moments of the day, the following noise-diagram is made. This gives us a good overview of which functions can be located next to each other, and which ones have to be separated by a greater distance. </p>
+<p><img src="..\img\1_geluid_schema.png" style="width:100%; height:100%;" frameborder="0"></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href=".." class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../a1.1_Product/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Products
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../assets/javascripts/bundle.c1ccee15.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
