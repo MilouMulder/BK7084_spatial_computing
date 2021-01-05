@@ -13,7 +13,7 @@
     
     
       
-        <title>Scripts - Spatial Computing Project Template</title>
+        <title>Notebook W3 - Spatial Computing Project Template</title>
       
     
     
@@ -61,11 +61,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#scripts" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -92,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Scripts
+              Notebook W3
             
           </span>
         </div>
@@ -273,7 +268,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../notebooks/placeholder_w1_Notebook/" class="md-nav__link">
+    <a href="../placeholder_w1_Notebook/" class="md-nav__link">
       Notebook W1
     </a>
   </li>
@@ -288,10 +283,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Massing
@@ -333,10 +330,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" checked>
     
     <label class="md-nav__link" for="nav-4-3">
       Notebooks
@@ -356,7 +355,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../notebooks/placeholder_w2_Notebook/" class="md-nav__link">
+    <a href="../placeholder_w2_Notebook/" class="md-nav__link">
       Notebook W2
     </a>
   </li>
@@ -366,11 +365,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../notebooks/placeholder_w3_Notebook/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       Notebook W3
     </a>
+    
   </li>
 
         
@@ -450,12 +456,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
       Index
@@ -473,20 +477,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../index/scripts/" class="md-nav__link">
       Scripts
     </a>
-    
   </li>
 
         
@@ -496,7 +491,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../figures/" class="md-nav__link">
+    <a href="../../index/figures/" class="md-nav__link">
       Figures
     </a>
   </li>
@@ -508,7 +503,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../presentations/" class="md-nav__link">
+    <a href="../../index/presentations/" class="md-nav__link">
       Presentations
     </a>
   </li>
@@ -520,7 +515,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../bibliography/" class="md-nav__link">
+    <a href="../../index/bibliography/" class="md-nav__link">
       Bibliography
     </a>
   </li>
@@ -600,38 +595,15 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                <h1 id="scripts">Scripts</h1>
-<blockquote>
-<p>Here you should include all of your scripts whether they are text, python notebook or procedural scripts. You should also include link to the link to relevant location in the main pages, description, explanatory materials such as pseudo code or flowcharts, and visualizations if it is applicable. If necessary this page can be broken down to multiple pages. Here is an example of how to include your scripts:</p>
-</blockquote>
-<div class="codehilite"><pre><span></span><code><span class="n">edges</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">cell_neigh</span> <span class="ow">in</span> <span class="n">cell_neighbors</span><span class="p">:</span>
-    <span class="n">cell</span> <span class="o">=</span> <span class="n">cell_neigh</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="k">for</span> <span class="n">neigh</span> <span class="ow">in</span> <span class="n">cell_neigh</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
-        <span class="k">if</span> <span class="n">neigh</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">neigh</span> <span class="o">&gt;</span> <span class="n">cell</span><span class="p">:</span>
-            <span class="n">edges</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">cell</span><span class="p">,</span> <span class="n">neigh</span><span class="p">))</span>
-</code></pre></div>
+                  <h1>Notebook W3</h1>
+                
+                <p>{\rtf1}</p>
                 
                   
                     
@@ -640,7 +612,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2020-11-09
+      Last update: 2021-01-05
     
   </small>
 </div>
@@ -663,7 +635,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../about/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../placeholder_w2_Notebook/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -672,19 +644,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                About
+                Notebook W2
               </div>
             </div>
           </a>
         
         
-          <a href="../figures/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../a4.1_Process/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Figures
+                Process
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
