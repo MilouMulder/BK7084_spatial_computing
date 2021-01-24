@@ -1,0 +1,1006 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.2">
+    
+    
+      
+        <title>Notebook 4 - Spatial Computing Project - Zoho’s Pearl</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.19190aaf.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.24b84193.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ef5552">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../css/ansi-colours.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="red" data-md-color-accent="">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#notebook-4-generative-relations-mcda" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Spatial Computing Project - Zoho’s Pearl" class="md-header-nav__button md-logo" aria-label="Spatial Computing Project - Zoho’s Pearl">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Spatial Computing Project - Zoho’s Pearl
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Notebook 4
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Spatial Computing Project - Zoho’s Pearl" class="md-nav__button md-logo" aria-label="Spatial Computing Project - Zoho’s Pearl">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Spatial Computing Project - Zoho’s Pearl
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Planning
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Planning" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Planning
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../a1.1_Process/" class="md-nav__link">
+      Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../a1.1_Product/" class="md-nav__link">
+      Products
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Configuring
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Configuring" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Configuring
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../a2.1_Process/" class="md-nav__link">
+      Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../a2.1_Product/" class="md-nav__link">
+      Products
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../a2.2_Notebook1/" class="md-nav__link">
+      Notebook 1
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Massing
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Massing" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Massing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../a3.2_Notebook2/" class="md-nav__link">
+      Notebook 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Notebook 4
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Notebook 4
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notebook-4-generative-relations-mcda" class="md-nav__link">
+    Notebook 4: Generative Relations mcda
+  </a>
+  
+    <nav class="md-nav" aria-label="Notebook 4: Generative Relations mcda">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flowchart" class="md-nav__link">
+    Flowchart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-diagrams" class="md-nav__link">
+    Additional diagrams
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pseudocode" class="md-nav__link">
+    Pseudocode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualisations-of-the-result" class="md-nav__link">
+    Visualisations of the result
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualisations of the result">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#growing-video" class="md-nav__link">
+    Growing video
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voxel-cloud" class="md-nav__link">
+    Voxel cloud
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Forming
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Forming" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Forming
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../a4.2_Notebook5/" class="md-nav__link">
+      Notebook 5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../a4.2_Notebook6/" class="md-nav__link">
+      Notebook 6
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../a4.2_Results/" class="md-nav__link">
+      Results
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../about/" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Index
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Index" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon"></span>
+        Index
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../index/scripts/" class="md-nav__link">
+      Scripts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../index/figures/" class="md-nav__link">
+      Figures
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../index/presentations/" class="md-nav__link">
+      Presentations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../index/bibliography/" class="md-nav__link">
+      Bibliography
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Documenting (TBR)
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Documenting (TBR)" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon"></span>
+        Documenting (TBR)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../documenting/instructions/" class="md-nav__link">
+      Instructions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../documenting/folder_structure/" class="md-nav__link">
+      Folder Structure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../documenting/guidelines/" class="md-nav__link">
+      Guidelines
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notebook-4-generative-relations-mcda" class="md-nav__link">
+    Notebook 4: Generative Relations mcda
+  </a>
+  
+    <nav class="md-nav" aria-label="Notebook 4: Generative Relations mcda">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flowchart" class="md-nav__link">
+    Flowchart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-diagrams" class="md-nav__link">
+    Additional diagrams
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pseudocode" class="md-nav__link">
+    Pseudocode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualisations-of-the-result" class="md-nav__link">
+    Visualisations of the result
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualisations of the result">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#growing-video" class="md-nav__link">
+    Growing video
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voxel-cloud" class="md-nav__link">
+    Voxel cloud
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Notebook 4</h1>
+                
+                <h2 id="notebook-4-generative-relations-mcda">Notebook 4: Generative Relations mcda</h2>
+<hr />
+<p><strong>Task List</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> Text</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Flowchart</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Charts</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Growing video</li>
+<li class="task-list-item"><input type="checkbox" disabled/> voxel cloud</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Psuedocode</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Notebook</li>
+</ul>
+<hr />
+<p>&nbsp;&nbsp;&nbsp;&nbsp;For the generation of the agent based design the following <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTXQ7xN6Oc80H7ovOIW-T_XuTy-P3YVa4lM9-Nyhjp6YincE2vTo0UpYqls-JCI2A/pubhtml?gid=1743851868&amp;single=true&amp;widget=true&amp;headers=false">matrix</a> has been made based on the agent criterias, this has been used in the definitive script. As you can see, we have focused on the following aspects: the connection between the spaces and the different entrances, the sun access, sky view, the silent level active (which means how little noise the facilities produce) and the noise sensitivity (which we will use for both the internal and external noise). <em>Space area</em> means the estimated amount of voxels (3,6m x 3,6m x 3,6m) each function needs and with the column initial location we manually indicate the specific position for the entrances.  </p>
+<figure>
+  <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTXQ7xN6Oc80H7ovOIW-T_XuTy-P3YVa4lM9-Nyhjp6YincE2vTo0UpYqls-JCI2A/pubhtml?gid=1743851868&amp;single=true&amp;widget=true&amp;headers=false" alt="CSV - Matrix" style="width:550px; height:400px;"></iframe>
+  <figcaption>Figure X: CSV - Matrix</figcaption>
+</figure>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;The entrances that we have determined are shown in <em><a href="3_entrance_sketch.jpg">Figure X</a></em>. The most public entrances have been placed on the most busy road (Vijverhofstraat). These are the entrances for the atrium, supermarket and cinema, arcade and café/restaurant/pub. The entrances to the courtyard and the atrium carry contrasting functions of public and private. Nevertheless, we want these spaces to have a strong connection which is simulated by placing them opposite of each other, whereby the entrance of the courtyard is situated at the more peaceful side, namely the north east side along the <em>Schoterbosstraat</em>. Subsequently the public library is situated at <em>Teilingerstraat</em> and the car parking at <em>Zomerhofstraat</em>. Both streets that are less busy than <em>Vijverhofstraat</em>, but are situated close to other the public entrances that have been appointed above.  And lastly, the trash room is placed on the <em>Teilingerstraat</em>. In addition, sound pollution, produced by the internal spaces inside the building as well as the sound pollution produced by the outdoors traffic, has been taken into account when the entrances were placed. The placement of the entrances divide the building into a sound producing side and a more quiet side. </p>
+<figure>
+  <img src="..\img\3\3_entrance_sketch.jpg" alt="Entrance sketch" style="width:80%; height:80%;">
+  <figcaption>Figure X: Entrance sketch</figcaption>
+</figure>
+
+<hr />
+<h3 id="flowchart">Flowchart</h3>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;In <a href="..\pdf\3_flowchart_notebook4.pdf">Figure X</a> the flowchart of notebook generative relations mcda is shown, in which the global steps that have been executed are presented. In the following diagrams we will zoom in on each criteria where the main steps have been visualized and are explained.</p>
+<figure>
+  <img src="..\pdf\3_flowchart_notebook4.pdf" alt="Flowchart Notebook 4" style="width:90%; height:80%;">
+  <figcaption>Figure X: Flowchart notebook 4</figcaption>
+</figure>
+<p><br><br><br></p>
+<hr />
+<h3 id="additional-diagrams">Additional diagrams</h3>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;In the following diagrams we will zoom in on each criteria where the main steps have been visualized and are explained.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="..\img\3\3_closeness.jpg">Diagram Closeness</a>: The location of the seed agents is calculated randomly. When the initial location has been determined the different seed agents will be attracted to each other, based on the closeness matrix. The seed agents will eventually grow towards the attracted seed.
+<br></p>
+<figure>
+  <img src="..\img\3\3_closeness.jpg" alt="-" style="width:60%; height:60%;">
+</figure>
+
+<p><br></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="..\img\3\3_entrances.jpg">Diagram Entrances</a>: The specific initial location of the entrances have been chosen manually, based on the entrance map. When the initial location is calculated randomly and is placed it will grow towards the attracted entrance seed, based on entrance accessibility matrix.</p>
+<figure>
+  <img src="..\img\3\3_entrances.jpg" alt="-" style="width:80%; height:80%;">
+</figure>
+
+<p><br></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="..\img\3\3_floorpreference.jpg">Diagram Floor preference</a>: A column of the building will be cut out and will get a range of distance values. When the initial location has been determined the different seed agents will be attracted to their desired floor preference, based on the floor preference matrix. The only floors that are preferred are 1 and 0 or nothing. The seed agents will grow towards the attracted floor preference.</p>
+<figure>
+  <img src="..\img\3\3_floorpreference.jpg" alt="-" style="width:80%; height:80%;">
+</figure>
+
+<p><br></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="..\img\3\3_internal_noise.jpg">Diagram Internal noise</a>: The location of the seed agents is calculated randomly. The amount of silence the agents produce will be calculated and will be compared to the noise sensitivity property. The agents that are sensitive for noise will grow away from the agents that create a lot of noise.</p>
+<figure>
+  <img src="..\img\3\3_internal_noise.jpg" alt="-" style="width:80%; height:80%;">
+</figure>
+
+<p><br></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="..\img\3\3_external_noise.png">Diagram External noise</a>: The amount of external noise around the building will be determined.The location of the seed agents is calculated randomly. When the initial location has been determined the noise sensitivity property, from the matrix will be compared to the external noise values. The agents that are sensitive to noise will grow away from the noisy facades. </p>
+<figure>
+  <img src="..\img\3\3_external_noise.png" alt="-" style="width:80%; height:80%;">
+</figure>
+
+<p><br></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="..\img\3\3_sunaccess.jpg">Diagram Sun access</a>: The amount of sun access of the building will be determined. The location of the seed agents is calculated randomly. When the initial location has been determined the different seed agents will be attracted to an amount of sun access, based on the sun access matrix. The seed agents will eventually grow towards the facade with the prefered amount of sun access.</p>
+<figure>
+  <img src="..\img\3\3_sunaccess.jpg" alt="-" style="width:80%; height:80%;">
+</figure>
+
+<p><br></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="..\img\3\3_skyview.jpg">Diagram Sky view</a>: The amount of sky view of the building will be determined.The location of the seed agents is calculated randomly. When the initial location has been determined the different seed agents will be attracted to an amount of sky view, based on the sky view matrix. The seed agents will eventually grow towards the prefered amount of sky view access.</p>
+<figure>
+  <img src="..\img\3\3_skyview.jpg" alt="-" style="width:80%; height:80%;">
+</figure>
+
+<p><br></p>
+<hr />
+<h3 id="pseudocode">Pseudocode</h3>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;For a better understanding of the code we wrote a pseudocode. The notebook, and the other notebooks, can be found <a href="..\index\scripts#notebook-4">here</a>.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Closeness</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">while i &lt; maximal amount of space area: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for each agent: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;calculate a closeness lattice to the seed voxel <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;select neighbours: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;check which neighs are available <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grade those neighs on distance and preference data <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;append best voxel to agent list</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left">Entrances</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">if agent location is assigned in matrix, then add to list of agent locations<br>else calculate agent location randomly and add to list of agent locations<br>while i &lt; maximal amount of space area:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for each agent:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; calculate a closeness lattice to the seed voxel <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; select neighbours: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; check which neighs are available <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; grade those neighs on distance and preference data<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; append best voxel to agent list</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left">Internal noise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">if agent location is assigned in matrix, then add to list of agent locations <br> else calculate agent location randomly and add to list of agent locations <br><br> define noise range <br> initialize noise sources <br><br>for each agent: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; extract agent locations <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; retrieve the silent level of the agent <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mapping the [0,1] values to noise level (db) <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for each agent location: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;append the noise source information<br>convert noise source information to numpy <br> create full lattice <br> extract the coordinates of the centroid of all voxel <br> extract voxel indices of all voxels <br> initializing the sum lattice of noise <br><br>for each source of noise: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; create distance lattice: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for every centroid  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; compute the euclidean distance <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; compute the noise lattice from dist lattice <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; summing the amount of noise <br> normalizing the noise values <br><br>list the environment information layers <br><br> while i &lt; maximal amount of space area: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for each agent: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; calculate a closeness lattice to the seed voxel <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; select neighbours:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; check which neighs are available <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; grade those neighs on distance, noise and preference data<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; append best voxel to agent list</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left">Floor preference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">if agent location is assigned in matrix, then add to list of agent locations <br> else calculate agent location randomly and add to list of agent locations <br><br>initialize floor lattice<br>cut out a column<br>specify a range array based on the number of voxels in the column <br>compute the distances based on the range column<br>compute the floor lattice <br>return the floor lattice<br>put the floor lattice in a dictionary<br><br>while i &lt; maximal amount of space area:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for each agent:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;calculate a closeness lattice to the seed voxel<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;select neighbours:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;heck which neighs are available<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grade those neighs on distance and preference data<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;append best voxel to agent list</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left">Internal sun access</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Loading the lattice from csv <br>list the environment information layers<br>if agent location is assigned in matrix, then add to list of agent locations<br>else calculate agent location randomly and add to list of agent locations <br><br>while i &lt; maximal amount of space area:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for each agent:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;calculate a closeness lattice to the seed voxel <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;select neighbours:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;check which neighs are available<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grade those neighs on distance and preference data<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;append best voxel to agent list</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left">Sky view</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Loading the lattice from csv<br>list the environment information layers<br><br>if agent location is assigned in matrix, then add to list of agent locations<br>else calculate agent location randomly and add to list of agent locations<br><br>while i &lt; maximal amount of space area:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for each agent:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;calculate a closeness lattice to the seed voxel<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;select neighbours:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;check which neighs are available<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grade those neighs on distance and preference data<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;append best voxel to agent list</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left">External noise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Loading the lattice from csv<br>list the environment information layers<br><br>if agent location is assigned in matrix, then add to list of agent locations<br>else calculate agent location randomly and add to list of agent locations<br><br>while i &lt; maximal amount of space area:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for each agent:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;calculate a closeness lattice to the seed voxel<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;select neighbours:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;check which neighs are available<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grade those neighs on distance and preference data<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;append best voxel to agent list</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="visualisations-of-the-result">Visualisations of the result</h3>
+<p>Last but not least: <strong>the results</strong>. The results are visualized in a video and in a voxel cloud</p>
+<h4 id="growing-video">Growing video</h4>
+<blockquote>
+<p>Video here</p>
+</blockquote>
+<h4 id="voxel-cloud">Voxel cloud</h4>
+<figure>
+  <img src="..\img\3\3_visualisation_w4.jpg" alt="Visualisation notebook 4" style="width:80%; height:80%;">
+  <figcaption>Figure X: Visualisation notebook 4</figcaption>
+</figure>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2021</span>
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../a3.2_Notebook2/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Notebook 2
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../a4.2_Notebook5/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Notebook 5
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../assets/javascripts/bundle.c1ccee15.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ['search'],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
