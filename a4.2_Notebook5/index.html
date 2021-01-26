@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#flowchart-xxx" class="md-skip">
+        <a href="#flowchart" class="md-skip">
           Skip to content
         </a>
       
@@ -402,15 +402,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#flowchart-xxx" class="md-nav__link">
-    Flowchart: XXX
+  <a href="#flowchart" class="md-nav__link">
+    Flowchart
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#additional-diagrams" class="md-nav__link">
-    additional diagrams
+    Additional diagrams
   </a>
   
 </li>
@@ -431,8 +431,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#growing-video" class="md-nav__link">
-    Growing video
+  <a href="#gif" class="md-nav__link">
+    GIF
   </a>
   
 </li>
@@ -548,18 +548,6 @@
   <li class="md-nav__item">
     <a href="../a4.2_Results/" class="md-nav__link">
       Results
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../a4.3_Floorplans/" class="md-nav__link">
-      Floorplans
     </a>
   </li>
 
@@ -751,15 +739,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#flowchart-xxx" class="md-nav__link">
-    Flowchart: XXX
+  <a href="#flowchart" class="md-nav__link">
+    Flowchart
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#additional-diagrams" class="md-nav__link">
-    additional diagrams
+    Additional diagrams
   </a>
   
 </li>
@@ -780,8 +768,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#growing-video" class="md-nav__link">
-    Growing video
+  <a href="#gif" class="md-nav__link">
+    GIF
   </a>
   
 </li>
@@ -813,44 +801,48 @@
                 
                   <h1>Notebook 5 - Sound</h1>
                 
-                <hr />
-<p><strong>Task List</strong></p>
-<ul class="task-list">
-<li class="task-list-item"><input type="checkbox" disabled checked/> Text</li>
-<li class="task-list-item"><input type="checkbox" disabled checked/> Flowchart</li>
-<li class="task-list-item"><input type="checkbox" disabled/> Charts</li>
-<li class="task-list-item"><input type="checkbox" disabled/> Growing video</li>
-<li class="task-list-item"><input type="checkbox" disabled/> voxel cloud</li>
-<li class="task-list-item"><input type="checkbox" disabled/> Pseudo code</li>
-<li class="task-list-item"><input type="checkbox" disabled/> Notebook</li>
-</ul>
-<hr />
-<p>The following conducts a sound analysis for each voxel in the building. While the script does produce the desired result it is not entirely physically correct. 
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;The following conducts a sound analysis for each voxel in the building. While the script does produce the desired result it is not entirely physically correct. 
 The first step in the script is to import the roads with different sound values as separate lists. The road map used for this calculation was made by hand based on intuition. The loudness of the different road types were estimated with an online tool. The next step is to select a radius around the envelope for analysis. This radius should be large enough for an accurate calculation but should not be too large to keep it computationally viable. 
-The roads within this radius are then divided into points and the distance is measured from each voxel to each point. We use the rule of dB lowers by 6 when the distance to the source doubles. After this step, we stray from accurate physics and use a mass addition to calculate the noise for each voxel. In real life, noise cannot just be added to each other. We however chose this approach to keep the analysis simple and within our reach. 
-To forego the computational limitations of grasshopper we split the calculation for each level of the building. This prevents crashes and allows us to get a more defined calculation overall.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;The roads within this radius are then divided into points and the distance is measured from each voxel to each point. We use the rule of dB lowers by 6 when the distance to the source doubles. After this step, we stray from accurate physics and use a mass addition to calculate the noise for each voxel. In real life, noise cannot just be added to each other. We however chose this approach to keep the analysis simple and within our reach. 
+<br>&nbsp;&nbsp;&nbsp;&nbsp; To forego the computational limitations of grasshopper we split the calculation for each level of the building. This prevents crashes and allows us to get a more defined calculation overall.
 The data per floor is pickled and saved in data/sound.</p>
-<h2 id="flowchart-xxx">Flowchart: XXX</h2>
-<blockquote>
-<p>add text</p>
-</blockquote>
+<hr />
+<h2 id="flowchart">Flowchart</h2>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;The flowchart as shown in <em><a href="../img/flowcharts/05_sound.jpg">Figure X</a></em> is in the second (blue) section of the <a href="../img/flowcharts/flowchart%20cuts.png">fundamental flowchart</a> as shown in the <a href="/a1.1_Product/#fundamental-flowchart"><em>Planning - products</em></a>.</p>
 <figure>
-  <img src="..\img\flowcharts\05_sound.jpg" alt="Flowchart - Sound" style="width:90%; height:90%;">
+  <img src="..\img\flowcharts\05_sound.jpg" alt="Flowchart - Sound" style="width:80%; height:80%;">
   <figcaption>Figure X: Flowchart - Sound</figcaption>
 </figure>
 
-<blockquote>
-<p>keep updating this flowchart! And make a link to a bigger version of this image.</p>
-</blockquote>
-<h2 id="additional-diagrams">additional diagrams</h2>
-<blockquote>
-<p>add diagrams</p>
-<p>add text</p>
-</blockquote>
+<hr />
+<h2 id="additional-diagrams">Additional diagrams</h2>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; <a href="../img/overige/sound_1.jpg">Figure X</a> shows the grasshopper schript of the first steps in which the curves are loaded and picked within radius.</p>
+<figure>
+  <img src="..\img\overige\sound_1.jpg" alt="Grasshopper file I" style="width:80%; height:80%;">
+  <figcaption>Figure X: Grasshopper file I</figcaption>
+</figure>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;In <a href="../img/overige/sound_2.jpg">Figure X</a>, grasshopper file for the last part of the script in which the calculation is done and the data exported, is visualized</p>
+<figure>
+  <img src="..\img\overige\sound_2.jpg" alt="Grasshopper file II" style="width:80%; height:80%;">
+  <figcaption>Figure X: Grasshopper file II</figcaption>
+</figure>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;A visualisation of the first step of establishing the radius is shown in <a href="../img/overige/sound_3.jpg">Figure X</a></p>
+<figure>
+  <img src="..\img\overige\sound_3.jpg" alt="Established radius" style="width:80%; height:80%;">
+  <figcaption>Figure X: Established radius</figcaption>
+</figure>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;After that, the curves are divided and distances are measured, as you can see in <a href="../img/overige/sound_4.jpg">Figure X</a>.</p>
+<figure>
+  <img src="..\img\overige\sound_4.jpg" alt="Measuring the distances" style="width:80%; height:80%;">
+  <figcaption>Figure X: Measuring the distances</figcaption>
+</figure>
+
+<hr />
 <h2 id="pseudo-code">Pseudo code</h2>
-<blockquote>
-<p>add text with link to notebook</p>
-</blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;For a better understanding of the code, we wrote a pseudo code. <a href="../notebooks/05_sound.gh">Grasshopper file 5</a>, and the other notebooks, can be found <a href="/index/scripts/">here</a>.</p>
 <div class="codehilite"><pre><span></span><code><span class="n">For</span> <span class="n">coordinates</span> <span class="ow">in</span> <span class="n">center</span> <span class="n">cluster</span>
     <span class="n">add</span> <span class="n">a</span> <span class="n">center</span> <span class="nb">next</span> <span class="n">to</span> <span class="n">the</span> <span class="n">center</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">x</span> <span class="n">direction</span>  
 
@@ -897,20 +889,19 @@ The data per floor is pickled and saved in data/sound.</p>
 <span class="n">Reshape</span> <span class="n">the</span> <span class="n">flat</span> <span class="n">lattice</span>
 </code></pre></div>
 
+<hr />
 <h2 id="visualisations-of-the-result">Visualisations of the result</h2>
-<blockquote>
-<p>add text</p>
-</blockquote>
-<h3 id="growing-video">Growing video</h3>
-<blockquote>
-<p>add text</p>
-<p>add video</p>
-</blockquote>
+<h3 id="gif">GIF</h3>
+<figure>
+  <img src="..\img\gifjes\sound.gif" alt="GIF - Sound" style="width:80%; height:80%;">
+  <figcaption>Figure 2: GIF - Sound </figcaption>
+</figure>
+
 <h3 id="voxelcloud">Voxelcloud</h3>
-<blockquote>
-<p>add text</p>
-<p>add image</p>
-</blockquote>
+<figure>
+  <img src="..\img\overige\sound_5.jpg" alt="End result - Sound calculation" style="width:80%; height:80%;">
+  <figcaption>Figure X: End result - Sound calculation</figcaption>
+</figure>
                 
                   
                     

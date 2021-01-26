@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#flowchart-xxx" class="md-skip">
+        <a href="#additional-diagrams" class="md-skip">
           Skip to content
         </a>
       
@@ -474,15 +474,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#flowchart-xxx" class="md-nav__link">
-    Flowchart: XXX
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#additional-diagrams" class="md-nav__link">
-    additional diagrams
+    Additional diagrams
   </a>
   
 </li>
@@ -503,8 +496,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#growing-video" class="md-nav__link">
-    Growing video
+  <a href="#gif" class="md-nav__link">
+    GIF
   </a>
   
 </li>
@@ -548,18 +541,6 @@
   <li class="md-nav__item">
     <a href="../a4.2_Results/" class="md-nav__link">
       Results
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../a4.3_Floorplans/" class="md-nav__link">
-      Floorplans
     </a>
   </li>
 
@@ -751,15 +732,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#flowchart-xxx" class="md-nav__link">
-    Flowchart: XXX
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#additional-diagrams" class="md-nav__link">
-    additional diagrams
+    Additional diagrams
   </a>
   
 </li>
@@ -780,8 +754,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#growing-video" class="md-nav__link">
-    Growing video
+  <a href="#gif" class="md-nav__link">
+    GIF
   </a>
   
 </li>
@@ -813,40 +787,40 @@
                 
                   <h1>Notebook 11 - Prepare for revit pipeline</h1>
                 
-                <hr />
-<p><strong>Task List</strong></p>
-<ul class="task-list">
-<li class="task-list-item"><input type="checkbox" disabled checked/> Text</li>
-<li class="task-list-item"><input type="checkbox" disabled/> Flowchart</li>
-<li class="task-list-item"><input type="checkbox" disabled/> Charts</li>
-<li class="task-list-item"><input type="checkbox" disabled/> Growing video</li>
-<li class="task-list-item"><input type="checkbox" disabled/> voxel cloud</li>
-<li class="task-list-item"><input type="checkbox" disabled checked/> Pseudo code</li>
-<li class="task-list-item"><input type="checkbox" disabled/> Notebook</li>
-</ul>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;This <a href="../notebooks/11_revit_pipeline.gh">grasshopper script</a> for Rhino.Inside Revit translates the lattice points to an actual building with walls, floors and windows.
+First, the boundary curves of each floor are established using the previously established facades list. Rhino.Inside will only place walls on straight base curves so the curves are split into segments and the walls are placed.
+Secondly, the floors are generated. In this project, we wanted to create a green roof. This meant that the floor type for inner floors had to be different from the floor type on the outside. This was done with the floors/roof list from the previous script. Using a region difference the boundary curves of the two roofs were found and the floors were placed.
+The most tedious part of this workflow was the placement of the windows. We wanted to place one window per voxel facade and have different window types based on the directions they would face. Establishing a list of points that was synchronous with window type for each wall was not too difficult. The window component in Grasshopper did however not behave in an expected manner. Instead of checking the first list against the first wall in a grafted input, it would check every wall against all lists and crash on the computational impossibility of this task. This behavior is probably due to the very recent release of Rhino.Inside. After having tried every way of inputting the data I accepted this reality and split the data into one list and one wall at a time. While this worked it did mean that I had to bake individual lists of windows for 383 walls, which was honestly painfully tedious.
+In the end, I would still say it was worth it due to the easy workflow of Revit to Twinmotion which was used to make the renders without any material, or UV mapping issues which are so common when exporting directly from Rhino.</p>
 <hr />
-<p>This script prepares a data list for the use in Grasshopper via Rhino.Inside Revit. Similarly to <a href="/a4.2_Notebook4/">Notebook 4 - solar outside</a>, a neighbour check is done to check for facades and roofs/floors. On the other hand, different from Notebook 4 is the way the result is saved. This script establishes a data structure in which the direction of facades are separately saved. This is later used to place facades on the proper voxel faces.</p>
-<h2 id="flowchart-xxx">Flowchart: XXX</h2>
-<blockquote>
-<p>add text</p>
-</blockquote>
-<!-- <figure>
-  <img src="..\img\2\XXX" alt="Flowchart IIII - XXX" style="width:90%; height:90%;">
-  <figcaption>Figure X: Flowchart IIII - XXX</figcaption>
-</figure> -->
+<h2 id="additional-diagrams">Additional diagrams</h2>
+<p>The Following <a href="../img/overige/revit_1.jpg">Figure X</a> represents the grasshopper script used in this step shows the generation of floors.</p>
+<figure>
+  <img src="..\img\overige\revit_1.jpg" alt="Grasshopper file - generation of floors" style="width:80%; height:80%;">
+  <figcaption>Figure X: Grasshopper file - generation of floors</figcaption>
+</figure>
 
-<blockquote>
-<p>keep updating this flowchart! And make a link to a bigger version of this image.</p>
-</blockquote>
-<h2 id="additional-diagrams">additional diagrams</h2>
-<blockquote>
-<p>add diagrams</p>
-<p>add text</p>
-</blockquote>
+<p><a href="../img/overige/revit_2.jpg">Figure X</a> shows the steps leading to the generation of walls.</p>
+<figure>
+  <img src="..\img\overige\revit_2.jpg" alt="Grasshopper file - generation of walls" style="width:80%; height:80%;">
+  <figcaption>Figure X: Grasshopper file - generation of walls</figcaption>
+</figure>
+
+<p>In <a href="../img/overige/revit_3.jpg">Figure X</a> the tedious process of generating the windows is visible.</p>
+<figure>
+  <img src="..\img\overige\revit_3.jpg" alt="Grasshopper file - generation of windows" style="width:80%; height:80%;">
+  <figcaption>Figure X: Grasshopper file - generation of windows</figcaption>
+</figure>
+
+<p>A visualisation of the walls and floors generated in revit, is visible in <a href="../img/overige/revit_4.jpg">Figure X</a></p>
+<figure>
+  <img src="..\img\overige\revit_4.jpg" alt="Walls and floors generated in revit" style="width:80%; height:80%;">
+  <figcaption>Figure X: Walls and floors generated in revit</figcaption>
+</figure>
+
+<hr />
 <h2 id="pseudo-code">Pseudo code</h2>
-<blockquote>
-<p>add text with link to notebook</p>
-</blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;For a better understanding of the code, we wrote a pseudo code. <a href="../notebooks/11_prepare_revit_pipeline/">The notebook</a>, and the other notebooks, can be found <a href="/index/scripts/">here</a>.</p>
 <div class="codehilite"><pre><span></span><code><span class="c1">#load the complete lattice</span>
 
 <span class="c1">#Create a coordinates list</span>
@@ -874,20 +848,20 @@
 <span class="n">Export</span> <span class="n">result</span> <span class="nb">list</span> <span class="k">as</span> <span class="s1">&#39;facade_3_6.txt&#39;</span>    
 </code></pre></div>
 
+<hr />
 <h2 id="visualisations-of-the-result">Visualisations of the result</h2>
-<blockquote>
-<p>add text</p>
-</blockquote>
-<h3 id="growing-video">Growing video</h3>
-<blockquote>
-<p>add text</p>
-<p>add video</p>
-</blockquote>
+<h3 id="gif">GIF</h3>
+<figure>
+  <img src="..\img\gifjes\revit_pipeline.gif" alt="GIF - Revit Pipeline" style="width:80%; height:80%;">
+  <figcaption>Figure 2: GIF - Revit Pipeline </figcaption>
+</figure>
+
 <h3 id="voxelcloud">Voxelcloud</h3>
-<blockquote>
-<p>add text</p>
-<p>add image</p>
-</blockquote>
+<p>In <a href="../img/overige/revit_5.jpg">Figure X</a>, the windows have been added to the revit model, this is the end result</p>
+<figure>
+  <img src="..\img\overige\revit_5.jpg" alt="End result Rhino.Inside" style="width:80%; height:80%;">
+  <figcaption>Figure X: End result Rhino.Inside</figcaption>
+</figure>
                 
                   
                     

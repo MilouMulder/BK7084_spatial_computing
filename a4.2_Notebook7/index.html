@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#flowchart-xxx" class="md-skip">
+        <a href="#flowchart" class="md-skip">
           Skip to content
         </a>
       
@@ -426,15 +426,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#flowchart-xxx" class="md-nav__link">
-    Flowchart: XXX
+  <a href="#flowchart" class="md-nav__link">
+    Flowchart
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#additional-diagrams" class="md-nav__link">
-    additional diagrams
+    Additional diagrams
   </a>
   
 </li>
@@ -455,8 +455,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#growing-video" class="md-nav__link">
-    Growing video
+  <a href="#gif" class="md-nav__link">
+    GIF
   </a>
   
 </li>
@@ -548,18 +548,6 @@
   <li class="md-nav__item">
     <a href="../a4.2_Results/" class="md-nav__link">
       Results
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../a4.3_Floorplans/" class="md-nav__link">
-      Floorplans
     </a>
   </li>
 
@@ -751,15 +739,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#flowchart-xxx" class="md-nav__link">
-    Flowchart: XXX
+  <a href="#flowchart" class="md-nav__link">
+    Flowchart
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#additional-diagrams" class="md-nav__link">
-    additional diagrams
+    Additional diagrams
   </a>
   
 </li>
@@ -780,8 +768,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#growing-video" class="md-nav__link">
-    Growing video
+  <a href="#gif" class="md-nav__link">
+    GIF
   </a>
   
 </li>
@@ -813,42 +801,28 @@
                 
                   <h1>Notebook 7 - Roof access</h1>
                 
-                <hr />
-<p><strong>Task List</strong></p>
-<ul class="task-list">
-<li class="task-list-item"><input type="checkbox" disabled checked/> Text</li>
-<li class="task-list-item"><input type="checkbox" disabled checked/> Flowchart</li>
-<li class="task-list-item"><input type="checkbox" disabled/> Charts</li>
-<li class="task-list-item"><input type="checkbox" disabled/> Growing video</li>
-<li class="task-list-item"><input type="checkbox" disabled/> voxel cloud</li>
-<li class="task-list-item"><input type="checkbox" disabled checked/> Pseudo code</li>
-<li class="task-list-item"><input type="checkbox" disabled/> Notebook</li>
-</ul>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;The following script establishes a simple rudimentary system for creating a roof access lattice. This lattice was needed for the later steps to be able to specify which rooms should grow up or down.
+&nbsp;&nbsp;&nbsp;&nbsp;<br>The script works on a simple principle. For each x,y a list of z values is saved, these values are then translated with a scalar to a lattice in which the maximum z has a value of 1.0 and the minimum of 0.0.
+&lt;&nbsp;&nbsp;&nbsp;&nbsp;br&gt;This lattice is then exported to a CSV.</p>
 <hr />
-<p>The following script establishes a simple rudimentary system for creating a roof access lattice. This lattice was needed for the later steps to be able to specify which rooms should grow up or down.
-<br>The script works on a simple principle. For each x,y a list of z values is saved, these values are then translated with a scalar to a lattice in which the maximum z has a value of 1.0 and the minimum of 0.0.
-<br>This lattice is then exported to a CSV.</p>
-<h2 id="flowchart-xxx">Flowchart: XXX</h2>
-<blockquote>
-<p>add text</p>
-</blockquote>
+<h2 id="flowchart">Flowchart</h2>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;The flowchart as shown in <em><a href="../img/flowcharts/07_roof_acces.jpg">Figure X</a></em> is in the third (green) section of the <a href="../img/flowcharts/flowchart%20cuts.png">fundamental flowchart</a> as shown in the <a href="/a1.1_Product/#fundamental-flowchart"><em>Planning - products</em></a>.</p>
 <figure>
-  <img src="..\img\flowcharts\07_roof_acces.jpg" alt="Flowchart - Roof access" style="width:90%; height:90%;">
+  <img src="..\img\flowcharts\07_roof_acces.jpg" alt="Flowchart - Roof access" style="width:80%; height:80%;">
   <figcaption>Figure X: Flowchart - Roof access</figcaption>
 </figure>
 
-<blockquote>
-<p>keep updating this flowchart! And make a link to a bigger version of this image.</p>
-</blockquote>
-<h2 id="additional-diagrams">additional diagrams</h2>
-<blockquote>
-<p>add diagrams</p>
-<p>add text</p>
-</blockquote>
+<hr />
+<h2 id="additional-diagrams">Additional diagrams</h2>
+<p>The following <a href="../img/overige/roof_access_1.jpg">Figure X</a> visualizes the system used to establish the roof acces lattice.</p>
+<figure>
+  <img src="..\img\overige\roof_access_1.jpg" alt="Roof access principle" style="width:20%; height:20%;">
+  <figcaption>Figure X: Roof access principle</figcaption>
+</figure>
+
+<hr />
 <h2 id="pseudo-code">Pseudo code</h2>
-<blockquote>
-<p>add text with link to notebook</p>
-</blockquote>
+<p>This is the Pseudo code for <a href="../notebooks/07_roof_access/">Notebook 7</a>.</p>
 <div class="codehilite"><pre><span></span><code><span class="c1">#Load the complete lattice</span>
 <span class="n">create</span> <span class="n">a</span> <span class="n">base</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">ones</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">shape</span> <span class="n">of</span> <span class="n">complete</span> <span class="n">lattice</span>
 
@@ -875,20 +849,19 @@
 <span class="n">Export</span> <span class="n">roof</span> <span class="n">access</span> <span class="n">lattice</span> <span class="n">to</span> <span class="s1">&#39;roof_access_3_6.csv&#39;</span>
 </code></pre></div>
 
+<hr />
 <h2 id="visualisations-of-the-result">Visualisations of the result</h2>
-<blockquote>
-<p>add text</p>
-</blockquote>
-<h3 id="growing-video">Growing video</h3>
-<blockquote>
-<p>add text</p>
-<p>add video</p>
-</blockquote>
+<h3 id="gif">GIF</h3>
+<figure>
+  <img src="..\img\gifjes\roof_access.gif" alt="GIF - Roof access" style="width:80%; height:80%;">
+  <figcaption>Figure 24: GIF - Roof access </figcaption>
+</figure>
+
 <h3 id="voxelcloud">Voxelcloud</h3>
-<blockquote>
-<p>add text</p>
-<p>add image</p>
-</blockquote>
+<figure>
+  <img src="..\img\overige\roof_access_2.jpg" alt="End result - Roof access" style="width:80%; height:80%;">
+  <figcaption>Figure X: End result - Roof access</figcaption>
+</figure>
                 
                   
                     

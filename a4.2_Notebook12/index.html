@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#flowchart-xxx" class="md-skip">
+        <a href="#flowchart" class="md-skip">
           Skip to content
         </a>
       
@@ -486,15 +486,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#flowchart-xxx" class="md-nav__link">
-    Flowchart: XXX
+  <a href="#flowchart" class="md-nav__link">
+    Flowchart
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#additional-diagrams" class="md-nav__link">
-    additional diagrams
+    Additional diagrams
   </a>
   
 </li>
@@ -528,6 +528,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#reflection" class="md-nav__link">
+    Reflection
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -548,18 +555,6 @@
   <li class="md-nav__item">
     <a href="../a4.2_Results/" class="md-nav__link">
       Results
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../a4.3_Floorplans/" class="md-nav__link">
-      Floorplans
     </a>
   </li>
 
@@ -751,15 +746,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#flowchart-xxx" class="md-nav__link">
-    Flowchart: XXX
+  <a href="#flowchart" class="md-nav__link">
+    Flowchart
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#additional-diagrams" class="md-nav__link">
-    additional diagrams
+    Additional diagrams
   </a>
   
 </li>
@@ -793,6 +788,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#reflection" class="md-nav__link">
+    Reflection
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -813,40 +815,32 @@
                 
                   <h1>Notebook 12 - Generative Relations corridors</h1>
                 
-                <hr />
-<p><strong>Task List</strong></p>
-<ul class="task-list">
-<li class="task-list-item"><input type="checkbox" disabled checked/> Text</li>
-<li class="task-list-item"><input type="checkbox" disabled/> Flowchart</li>
-<li class="task-list-item"><input type="checkbox" disabled/> Charts</li>
-<li class="task-list-item"><input type="checkbox" disabled/> Growing video</li>
-<li class="task-list-item"><input type="checkbox" disabled/> voxel cloud</li>
-<li class="task-list-item"><input type="checkbox" disabled checked/> Pseudo code</li>
-<li class="task-list-item"><input type="checkbox" disabled/> Notebook</li>
-</ul>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;In this notebook the corridors and shafts have been created for the building. To showcase this process the flowchart will be presented, whereby additional diagrams have simplified every step, in comparison to the pseudo codes that zooms in on the definitive script. Moreover the visualisations of the end product will be revealed and lastly the reflection will be discussed. </p>
 <hr />
-<p>This script prepares a data list for the use in Grasshopper via Rhino.Inside Revit. Similarly to <a href="/a4.2_Notebook4/">Notebook 4 - solar outside</a>, a neighbour check is done to check for facades and roofs/floors. On the other hand, different from Notebook 4 is the way the result is saved. This script establishes a data structure in which the direction of facades are separately saved. This is later used to place facades on the proper voxel faces.</p>
-<h2 id="flowchart-xxx">Flowchart: XXX</h2>
-<blockquote>
-<p>add text</p>
-</blockquote>
-<!-- <figure>
-  <img src="..\img\2\XXX" alt="Flowchart IIII - XXX" style="width:90%; height:90%;">
-  <figcaption>Figure X: Flowchart IIII - XXX</figcaption>
-</figure> -->
+<h2 id="flowchart">Flowchart</h2>
+<p>In <a href="../img/flowcharts/12_corridors.png">Figure X</a> the flowchart for the making of the shafts and corridors is shown. In which, the global steps that have been executed are presented.</p>
+<figure>
+  <img src="..\img\flowcharts\12_corridors.png" alt="Flowchart - Corridors" style="width:80%; height:80%;">
+  <figcaption>Figure X: Flowchart - Corridors</figcaption>
+</figure>
 
-<blockquote>
-<p>keep updating this flowchart! And make a link to a bigger version of this image.</p>
-</blockquote>
-<h2 id="additional-diagrams">additional diagrams</h2>
-<blockquote>
-<p>add diagrams</p>
-<p>add text</p>
-</blockquote>
+<hr />
+<h2 id="additional-diagrams">Additional diagrams</h2>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Our traffic space is based on our metro network. The shafts have been put in the center of the building, which is the atrium and the courtyard. In this way, public and private will be separated from each other, as you can see in <a href="../img/overige/5_metronetwork_shafts.jpg">Figure X</a>. Subsequently, there are 2 shafts for each center, so that the quiet and noisy facilities can also be separated from each other. </p>
+<figure>
+  <img src="..\img\overige\5_metronetwork_shafts.jpg" alt="Metronetwok - shafts" style="width:80%; height:80%;">
+  <figcaption>Figure X: Metronetwok - shafts</figcaption>
+</figure>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;In the next diagrams (<a href="../img/overige/5_shafts.png">Figure X</a>), the main steps of the process have been visualized. Extra weight has been added to the atrium and courtyard. This way the attraction of the shafts to the atrium and courtyard gets stronger. As a result, the shafts are located close to the atrium and courtyard. The clusters are based on the metro network that has been discussed in previous Figure X. Furthermore, an extra column is placed next to every shaft, which stands for a staircase, and we assigned the shafts to have a maximum height to fit our voxelated model. In conclusion, the corridors take the shortest path to grow towards their agent seeds that belong to their cluster.</p>
+<figure>
+  <img src="..\img\overige\5_shafts.png" alt="Diagrams - Shafts" style="width:80%; height:80%;">
+  <figcaption>Figure X: Diagrams - Shafts</figcaption>
+</figure>
+
+<hr />
 <h2 id="pseudo-code">Pseudo code</h2>
-<blockquote>
-<p>add text with link to notebook</p>
-</blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;For a better understanding of the code, we wrote a pseudo code. <a href="../notebooks/12_generative_relations_corridors/">The notebook</a>, and the other notebooks, can be found <a href="/index/scripts/">here</a>.</p>
 <div class="codehilite"><pre><span></span><code><span class="c1">#load the complete lattice</span>
 
 <span class="c1">#Create a coordinates list</span>
@@ -874,20 +868,24 @@
 <span class="n">Export</span> <span class="n">result</span> <span class="nb">list</span> <span class="k">as</span> <span class="s1">&#39;facade_3_6.txt&#39;</span>    
 </code></pre></div>
 
+<hr />
 <h2 id="visualisations-of-the-result">Visualisations of the result</h2>
-<blockquote>
-<p>add text</p>
-</blockquote>
 <h3 id="growing-video">Growing video</h3>
-<blockquote>
-<p>add text</p>
-<p>add video</p>
-</blockquote>
+<p>The gif gif's a quick snapshot of the voxel seeds, shafts and corridors.</p>
+<figure>
+  <img src="..\img\overige\corridors_gif.gif" alt="gif - corridors" style="width:80%; height:80%;">
+  <figcaption>Figure X: gif - corridors</figcaption>
+</figure>
+
 <h3 id="voxelcloud">Voxelcloud</h3>
-<blockquote>
-<p>add text</p>
-<p>add image</p>
-</blockquote>
+<p>Subsequently in <a href="../img/overige/voxels_shaft_corridors.jpg">Figure X</a> you can see the end result of the circulation space.</p>
+<figure>
+  <img src="..\img\overige\voxels_shaft_corridors.jpg" alt="End result - corridors" style="width:80%; height:80%;">
+  <figcaption>Figure X: End result - corridors</figcaption>
+</figure>
+
+<h3 id="reflection">Reflection</h3>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;For the growing of the corridors and the shafts, the agent seeds have been located. The shafts have a strong preference for where they would like to be positioned close to and the shafts take the shortest route to grow to their agents' seeds. All in all a functioning system that creates indispensable corridors. Nevertheless, an important footnote is that the corridors only grow towards the agents' seeds, which means that some functions that are placed on multiple floors do not have a corridor. Criteria that would have been incorporated if there was more time during this course. </p>
                 
                   
                     
