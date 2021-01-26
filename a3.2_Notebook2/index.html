@@ -807,22 +807,22 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp;The flowchart as shown in <em><a href="../img/flowcharts/02_solar_envelope.jpg">Figure 25</a></em> is in the first (purple) section of the <a href="../img/flowcharts/flowchart%20cuts.png">fundamental flowchart</a> as shown in the <a href="/a1.1_Product/#fundamental-flowchart"><em>Planning - products</em></a>.</p>
 <figure>
   <img src="..\img\flowcharts\02_solar_envelope.jpg" alt="Flowchart - Solar envelope" style="width:80%; height:80%;">
-  <figcaption>Figure 25: Flowchart - Solar envelope</figcaption>
+  <figcaption>Figure 26: Flowchart - Solar envelope</figcaption>
 </figure>
 
 <hr />
 <h2 id="additional-diagrams">Additional diagrams</h2>
 <p><br> &nbsp;&nbsp;&nbsp;&nbsp;Firstly, a Solar access calculation is done with vectors from suns towards the voxels. If these rays intersect with the context mesh they are set to 0. 
- <br> &nbsp;&nbsp;&nbsp;&nbsp; Secondly and more importantly, a solar envelope calculation is done by shooting rays from the voxels towards the sun. Then this list of rays is compared with the list from solar access. <a href="../img/overige/solar_envelope_1.jpg">Figure 26</a> visualizes how the logic behind the solar envelope works. When an intersection is found at place 2, a shadow is cast on the context. It is important to establish whether this shadow was cast by the voxel or by the context. For this, we use the comparison with the solar access list. If an intersection is found at 1, the shadow is cast by the context. For a ray to count towards the solar envelope of a voxel, an intersection needs to be found at 2 and not at 1. </p>
+ <br> &nbsp;&nbsp;&nbsp;&nbsp; Secondly and more importantly, a solar envelope calculation is done by shooting rays from the voxels towards the sun. Then this list of rays is compared with the list from solar access. <a href="../img/overige/solar_envelope_1.jpg">Figure 27</a> visualizes how the logic behind the solar envelope works. When an intersection is found at place 2, a shadow is cast on the context. It is important to establish whether this shadow was cast by the voxel or by the context. For this, we use the comparison with the solar access list. If an intersection is found at 1, the shadow is cast by the context. For a ray to count towards the solar envelope of a voxel, an intersection needs to be found at 2 and not at 1. </p>
 <figure>
   <img src="..\img\overige\solar_envelope_1.jpg" alt="Visualisation of the process" style="width:40%; height:40%;">
-  <figcaption>Figure 26: Visualisation of the process</figcaption>
+  <figcaption>Figure 27: Visualisation of the process</figcaption>
 </figure>
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;When the solar analysis is done, the list of voxels is split, using a low and high bound threshold value. A threefold of lattices are established in this step: Voxels to recalculate, voxels to keep and voxels to remove. As you can see in <a href="../img/overige/solar_envelope_2.jpg">Figure 27</a>, the red top part would be removed, the blue recalculated and the green kept.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;When the solar analysis is done, the list of voxels is split, using a low and high bound threshold value. A threefold of lattices are established in this step: Voxels to recalculate, voxels to keep and voxels to remove. As you can see in <a href="../img/overige/solar_envelope_2.jpg">Figure 28</a>, the red top part would be removed, the blue recalculated and the green kept.</p>
 <figure>
   <img src="..\img\overige\solar_envelope_2.jpg" alt="Visualisation of the grouping of the voxels" style="width:40%; height:40%;">
-  <figcaption>Figure 27: Visualisation of the grouping of the voxels</figcaption>
+  <figcaption>Figure 28: Visualisation of the grouping of the voxels</figcaption>
 </figure>
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;The resolution of these lattices are increased to a desired size. In our case one voxel is split into 8 smaller voxels, this is called an Octree system. This whole process can be seen as Pass 1. With the recalculation lattice, the process is repeated until, in our case, the voxel size is 3,6. A total of three passes were needed. 
@@ -981,44 +981,44 @@ Each pass is individually exported a CSV or pickled into a txt file.</p>
 <h3 id="gif">GIF</h3>
 <figure>
   <img src="..\img\gifjes\02_solar_envelope.gif" alt="GIF - Solar envelope" style="width:80%; height:80%;">
-  <figcaption>Figure 2: GIF - Solar envelope </figcaption>
+  <figcaption>Figure 29: GIF - Solar envelope </figcaption>
 </figure>
 
 <h3 id="voxelcloud">Voxelcloud</h3>
 <p>1) This is the first solar envelope done on a voxel size of 14,4.</p>
 <figure>
   <img src="..\img\overige\solar_envelope_3.jpg" alt="Solar envelope - size 14,4" style="width:80%; height:80%;">
-  <figcaption>Figure 28: Solar envelope - size 14,4</figcaption>
+  <figcaption>Figure 30: Solar envelope - size 14,4</figcaption>
 </figure>
 
 <p>2) The visible voxels are kept.</p>
 <figure>
   <img src="..\img\overige\solar_envelope_4.jpg" alt="Selection 1" style="width:80%; height:80%;">
-  <figcaption>Figure 29: Selection 1</figcaption>
+  <figcaption>Figure 31: Selection 1</figcaption>
 </figure>
 
 <p>3) The smaller voxels added back to the model are recalculated at size 7,2.</p>
 <figure>
   <img src="..\img\overige\solar_envelope_5.jpg" alt="Selection 1 + voxels in size 7,2" style="width:80%; height:80%;">
-  <figcaption>Figure 30: Selection 1 + voxels in size 7,2</figcaption>
+  <figcaption>Figure 32: Selection 1 + voxels in size 7,2</figcaption>
 </figure>
 
 <p>4) These voxels are kept.</p>
 <figure>
   <img src="..\img\overige\solar_envelope_6.jpg" alt="Selection 2" style="width:80%; height:80%;">
-  <figcaption>Figure 31: Selection 2</figcaption>
+  <figcaption>Figure 33: Selection 2</figcaption>
 </figure>
 
 <p>5) Again the voxel size is reduced and the visualised part is recalculated.</p>
 <figure>
   <img src="..\img\overige\solar_envelope_7.jpg" alt="Selection 2 + voxels in size 3,6" style="width:80%; height:80%;">
-  <figcaption>Figure 32: Selection 2 + voxels in size 3,6</figcaption>
+  <figcaption>Figure 34: Selection 2 + voxels in size 3,6</figcaption>
 </figure>
 
 <p>6) The end result.</p>
 <figure>
   <img src="..\img\overige\solar_envelope_8.jpg" alt="Final result" style="width:80%; height:80%;">
-  <figcaption>Figure 33: Final result</figcaption>
+  <figcaption>Figure 35: Final result</figcaption>
 </figure>
                 
                   
