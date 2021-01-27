@@ -648,68 +648,6 @@
   </li>
 
     
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
-    
-    <label class="md-nav__link" for="nav-8">
-      Documenting (TBR)
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Documenting (TBR)" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
-        <span class="md-nav__icon md-icon"></span>
-        Documenting (TBR)
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../documenting/instructions/" class="md-nav__link">
-      Instructions
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../documenting/folder_structure/" class="md-nav__link">
-      Folder Structure
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../documenting/guidelines/" class="md-nav__link">
-      Guidelines
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
   </ul>
 </nav>
                   </div>
@@ -787,32 +725,32 @@
                 
                   <h1>Notebook 11 - Prepare for revit pipeline</h1>
                 
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;This <a href="../notebooks/11_revit_pipeline.gh">grasshopper script</a> for Rhino.Inside Revit translates the lattice points to an actual building with walls, floors and windows.
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;This <a href="notebooks\11_revit_pipeline.gh">grasshopper script</a> for Rhino.Inside Revit translates the lattice points to an actual building with walls, floors and windows.
 First, the boundary curves of each floor are established using the previously established facades list. Rhino.Inside will only place walls on straight base curves so the curves are split into segments and the walls are placed.
 Secondly, the floors are generated. In this project, we wanted to create a green roof. This meant that the floor type for inner floors had to be different from the floor type on the outside. This was done with the floors/roof list from the previous script. Using a region difference the boundary curves of the two roofs were found and the floors were placed.
 The most tedious part of this workflow was the placement of the windows. We wanted to place one window per voxel facade and have different window types based on the directions they would face. Establishing a list of points that was synchronous with window type for each wall was not too difficult. The window component in Grasshopper did however not behave in an expected manner. Instead of checking the first list against the first wall in a grafted input, it would check every wall against all lists and crash on the computational impossibility of this task. This behavior is probably due to the very recent release of Rhino.Inside. After having tried every way of inputting the data I accepted this reality and split the data into one list and one wall at a time. While this worked it did mean that I had to bake individual lists of windows for 383 walls, which was honestly painfully tedious.
 In the end, I would still say it was worth it due to the easy workflow of Revit to Twinmotion which was used to make the renders without any material, or UV mapping issues which are so common when exporting directly from Rhino.</p>
 <hr />
 <h2 id="additional-diagrams">Additional diagrams</h2>
-<p>The Following <a href="../img/overige/revit_1.jpg">Figure 64</a> represents the grasshopper script used in this step shows the generation of floors.</p>
+<p>The Following <a href="..\img\overige\revit_1.jpg">Figure 64</a> represents the grasshopper script used in this step shows the generation of floors.</p>
 <figure>
   <img src="..\img\overige\revit_1.jpg" alt="Grasshopper file - generation of floors" style="width:80%; height:80%;">
   <figcaption>Figure X: Grasshopper file - generation of floors</figcaption>
 </figure>
 
-<p><a href="../img/overige/revit_2.jpg">Figure X</a> shows the steps leading to the generation of walls.</p>
+<p><a href="..\img\overige\revit_2.jpg">Figure X</a> shows the steps leading to the generation of walls.</p>
 <figure>
   <img src="..\img\overige\revit_2.jpg" alt="Grasshopper file - generation of walls" style="width:80%; height:80%;">
   <figcaption>Figure 65: Grasshopper file - generation of walls</figcaption>
 </figure>
 
-<p>In <a href="../img/overige/revit_3.jpg">Figure X</a> the tedious process of generating the windows is visible.</p>
+<p>In <a href="..\img\overige\revit_3.jpg">Figure X</a> the tedious process of generating the windows is visible.</p>
 <figure>
   <img src="..\img\overige\revit_3.jpg" alt="Grasshopper file - generation of windows" style="width:80%; height:80%;">
   <figcaption>Figure 66: Grasshopper file - generation of windows</figcaption>
 </figure>
 
-<p>A visualisation of the walls and floors generated in revit, is visible in <a href="../img/overige/revit_4.jpg">Figure X</a></p>
+<p>A visualisation of the walls and floors generated in revit, is visible in <a href="..\img\overige\revit_4.jpg">Figure X</a></p>
 <figure>
   <img src="..\img\overige\revit_4.jpg" alt="Walls and floors generated in revit" style="width:80%; height:80%;">
   <figcaption>Figure 67: Walls and floors generated in revit</figcaption>
@@ -820,7 +758,7 @@ In the end, I would still say it was worth it due to the easy workflow of Revit 
 
 <hr />
 <h2 id="pseudo-code">Pseudo code</h2>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;For a better understanding of the code, we wrote a pseudo code. <a href="../notebooks/11_prepare_revit_pipeline/">The notebook</a>, and the other notebooks, can be found <a href="https://miloumulder.github.io/spatial_computing_project_template/index/scripts/">here</a>.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;For a better understanding of the code, we wrote a pseudo code. <a href="notebooks\11_prepare_revit_pipeline.ipynb">The notebook</a>, and the other notebooks, can be found <a href="https://miloumulder.github.io/spatial_computing_project_template/index/scripts/">here</a>.</p>
 <div class="codehilite"><pre><span></span><code><span class="c1">#load the complete lattice</span>
 
 <span class="c1">#Create a coordinates list</span>
@@ -857,7 +795,7 @@ In the end, I would still say it was worth it due to the easy workflow of Revit 
 </figure>
 
 <h3 id="voxelcloud">Voxelcloud</h3>
-<p>In <a href="../img/overige/revit_5.jpg">Figure 69</a>, the windows have been added to the revit model, this is the end result</p>
+<p>In <a href="..\img\overige\revit_5.jpg">Figure 69</a>, the windows have been added to the revit model, this is the end result</p>
 <figure>
   <img src="..\img\overige\revit_5.jpg" alt="End result Rhino.Inside" style="width:80%; height:80%;">
   <figcaption>Figure 69: End result Rhino.Inside</figcaption>
@@ -870,7 +808,7 @@ In the end, I would still say it was worth it due to the easy workflow of Revit 
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 26, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 27, 2021</span>
     
   </small>
 </div>
